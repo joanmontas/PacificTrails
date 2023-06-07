@@ -1,0 +1,170 @@
+
+body {
+	/*
+		background is the image ptrbackground.jpg.
+		The The 'main' area is centered in the browser.
+		I had to use repeat-x in order to prevent
+		repeat on the unwanted position.
+		The page has a solid #00569f as required
+	*/
+	display: grid;
+	place-items: center;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(./ptrbackground.jpg);
+	background-size:auto;
+	background-repeat:repeat-x;
+	background-color: #00569f;
+}
+
+#wrapper {
+	/*
+		The 'main' area of the page is 80% of the page width.
+		the page should have a width of no less than 600px.
+	*/
+	background-color: #ffffff;
+	width: 80%;
+	min-width: 600px;
+	/* 
+		I decided to use grid to divide the components
+	*/
+	display: grid;
+	grid-template-columns: 200px auto; 
+   	grid-template-rows: auto auto auto auto;
+	margin-bottom: 10%;
+}
+
+header {
+	/*
+		place header in its right places;
+		Along with the background image.
+	*/
+	grid-row: 1 / span 1;
+  	grid-column: 1 / span 2;
+	background-image: url(./sunset.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center;
+	height: 70px;
+}
+
+nav {
+	/*
+		nav should be placed in the left side using grid.
+		Note that it has a fixed-wdith as required.
+	*/
+	grid-row: 2 / span 2;
+	grid-column: 1 / span 1;
+
+	width: 180px;
+	background-color: #3399CC;
+}
+
+nav ul {
+	/*
+		remove bullet points from nav
+	*/
+	font-size: 1.2em;
+	list-style-type:none;
+}
+
+nav a {
+	color: #000033;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+h1 {
+	margin-bottom: 0;
+	padding-left: 10px;
+	color: white;
+}
+
+h2 {
+	/* an approximtion of the color */
+	color: #46ade0;
+}
+
+h1, h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#content {
+	/*
+		places content in its right place and adjust the division 
+		between its surrounding component
+	*/
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+	padding-left: 30px;
+	padding-right: 10px;
+	background-color: #ffffff;
+
+}
+
+.resort {
+	/* 
+		using the provided resort class for fun 
+		might come useful if we add other span
+	*/
+	color: #3399CC;
+	font-weight: bold;
+}
+
+#content img {
+	/*
+		place the content's image towards the left.
+		text will now float around it.
+	*/
+	float: left;
+	padding-right: 30px;
+}
+
+#content ul {
+	/* place the li's bulletpoint in the inside*/
+    list-style-position: inside;
+}
+
+#content li {
+	/* Notice that the bulleted list uses as special bullet */
+	list-style-image: url(./marker.gif);
+}
+
+#contact {
+	font-size: 90%;
+}
+
+dt {
+	color: #000033;
+}
+
+footer {
+	/*
+		places the footer in its place within the grid system
+	*/
+	font-size: 80%;
+	font-style: italic;
+	background-color: #ffffff;
+	font-family: Georgia, "Times New Roman", serif;
+	grid-row: 3 / span 1;
+  	grid-column: 2 / span 1;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+footer a {
+	/*
+		Its hard to say, but the footer's link seems italic.
+		Again approximation.
+	*/
+	font-style: normal;
+}
